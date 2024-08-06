@@ -54,10 +54,7 @@ console.log(somme([6, 8, 3, 2, 5]));
 // reduce
 let tab = [45,78,87,34];
 const somme = (tab) => {
-    tab.reduce((accumulator, valeur) => {
-        accumulator + valeur
-    }, 0)
+    tab.reduce((accumulator, valeur) => accumulator + valeur, 0)
 }
 // l'accumulator est la valeur de départ
-
 console.log(somme(tab));
