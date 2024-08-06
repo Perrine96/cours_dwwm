@@ -15,10 +15,9 @@ function carre(nombre) {
     return result;
 }
 console.log(carre(4));
+console.log(carre(5));
 
+const carrebis = nombre => nombre * nombre;
+console.log(carrebis(4));
+console.log(carrebis(5));
 
-const carrebis = (nombre) => {
-    let result = nombre * nombre;
-    return result;
-}
-console.log(carrebis(2));
