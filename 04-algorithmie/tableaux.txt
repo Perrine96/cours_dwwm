@@ -1,0 +1,106 @@
+EXERCICE TABLEAU FOR 
+1. Renseigner 6 notes pour 1 seul élève
+2. Pouvoir afficher sa moyenne
+
+Algorithme 
+// 
+Variables 
+moyenne, noteGlobale, notes[]: réels; 
+i : entiers; 
+Début 
+    Pour i ← 0 à 5 faire 
+    notes[] ← saisie("Veuillez saisir une note:");
+    Pour i ← 0 à taille notes faire 
+    noteGlobale ← noteGlobale + notes[i]
+    Finpour
+    moyenne ← noteGlobale / taille notes
+    Ecrire("La moyenne est de " & moyenne)
+Fin
+
+
+
+
+BOUCLE WHILE 
+Variables 
+Test [], quitter : CAR;
+Début 
+    Tant que (quitter <> "n") faire 
+        quitter ← saisie ("Renseignez une nouvelle note ou tapez "n" pour terminer");
+    Si (quitter <> "n") alors
+        Test [] ← saisie();
+    Finsi
+    Fin tant que
+Fin
+
+
+BOUCLE DO WHILE
+Variables 
+Test [], quitter : CAR;
+Début 
+    faire 
+
+    tant que ()
+
+
+TABLEAUX MULTIDIMENSIONNELS
+pour i ← 0 à taille Tab faire 
+    pour j ← 0 à taille Tab[i] faire 
+        Ecrire(Tab [i][j])
+    Fin pour
+Fin pour
+
+
+
+EXERCICES 
+
+1 - Ecrire un algorithme permettant de calculer la somme, produit et moyenne des éléments d’un tableau. 
+
+Algorithme 
+Variables
+quitter : CAR, 
+tab[], moyenne, produit, somme, i : entier;
+Début 
+    moyenne = 0;
+    somme = 0; 
+    produit = 1;
+    quitter = "Y";
+    i = 0;
+
+    Tant que (quitter <> "n") faire 
+        quitter ← saisie ("Renseignez un nombre ou tapez "n" pour terminer");
+    pour i ← 0 à taille Tab faire
+        test[i] ← saisie(); // l'utilisateur entre un nombre
+    fin tant que
+    Pour i ← 0 à taille tab - 1 faire
+    somme ← somme + tab[i]; 
+    produit ← produit * tab[i]
+    Fin pour 
+    moyenne ← somme / taille tab 
+
+
+    Ecrire("La somme est " & somme & ", le produit est " & produit " et la moyenne est" & moyenne)
+Fin
+
+
+
+2 - Ecrire un algorithme qui permet de trouver le nombre d'occurrence d'un élément dans un tableau.
+
+Algorithme 
+// algorithme qui permet de trouver le nombre d'occurrence d'un élément dans un tableau
+Variables
+tab[5, 10, 49, 16, 49, 5, 30], occurrence, nombre, i : entiers;
+Début
+    occurrence ← 0;
+    nombre ← 0; 
+    i ← 0;
+
+    nombre ← saisie("Veuillez entrer un nombre");
+    Tant que i ← 0 à taille tab - 1 faire 
+        Si nombre = tab[i] alors
+            occurrence ← occurrence + 1;
+        Finsi
+    Fin pour
+Début 
+
+    Ecrire("L'occurence se répète " & occurrence " fois.")
+Fin

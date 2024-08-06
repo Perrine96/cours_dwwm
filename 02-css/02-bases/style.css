@@ -1,0 +1,148 @@
+/* TODO: import police et variable css */
+@font-face {
+    font-family: Playwrite;
+    src: url(./PlaywritePE-VariableFont_wght.ttf);
+    /* 
+        font face permet d'importer une police d'écriture 
+        la propriété font-family prend le nom qu'on souhaite lui donner 
+        src pour le chemin jusqu'au fichier 
+        Ensuite on peut utiliser là où on souhaite la police font-family avec le nom choisi
+    */
+}
+
+:root {
+    font-size: 30px;
+    --bg-color-text: rgb(179, 130, 238); 
+    /* 
+    une variable css commence par "--" puis porte le nom qu'on souhaite
+    elle peut prendre n'importe quelle valeur 
+    elle pourra être utilisée presque partout dans notre code en appelant son nom dans la fonction "var()"
+    une variable css n'est accessible que si elle est déclarée dans un parent (:root représente le document dans son intégraité) 
+    */
+}
+
+body {
+    background-color: rgb(144, 162, 234);
+}
+
+.target1 {
+    font-family: Playwrite;
+    /* 
+        rgb prend entre ses paranthèses 3 valeurs entre 0 et 255
+        Elles correspondent au niveau de rouge, vert et bleu 
+    */
+    background-color: rgb(0,0,0);
+    color: rgb(255,255,255);
+}
+
+.target2 {
+    background-color: rgb(21, 129, 161);
+    /* 
+        rgba prend une 4ème valeur entre 0 et 1 correspondnat à l'opacité de celle-ci
+    */
+    color: rgba(255,255,255,0.5);
+}
+
+.target3 {
+    /* 
+        Les couleurs peuvent aussi être choisies en hexadecimal
+        Dans ce cas on utilisera un "#" suivi de 6 caractères 
+        Chaque paires de caractères correspond à une couleur : rouge, vert ou bleu
+        Elles vont de 00 à FF 
+        On ajoute une paire de caractère en plus plus l'opacité
+    */
+    background-color: #000000;
+    color: #FFFFFF;
+
+}
+
+.target4 {
+    /* 
+        hsl prend 3 valeurs : hue, saturation et lightness 
+        La première est la position sur un cercle chromatique de 0 à 360
+        La deuxième est la saturation de la couleur en pourcentage
+        La troisième est la luminosité de la couleur en pourcentage
+    */
+    background-color: #2520F0;
+    color: #FFFFFF80;
+}
+
+.target5 {
+    background-color: hsl(0, 0%, 0%);
+    color: hsl(360, 100%, 100%);
+}
+
+.target6 {
+    background-color: hsl(241, 61%, 46%);
+    /* 
+        hsla prend l'alpha en quatrième paramètre (opacité)
+    */
+    color: hsla(360, 100%, 100%, 0.5);
+    font-size: 20px; 
+}
+
+.target7 {
+    /* 
+        n fois la taille de la police qui est fournie à l'élément
+    */
+    font-size: 2em;
+}
+
+.target8 {
+    --bg-color-text: red;
+   /* 
+        n fois la taille de la police à la racine du document 
+   */
+    font-size: 2rem;
+    background-color: var(--bg-color-text);
+}
+
+.target9 {
+    /* 
+    vw pour viewport width, représente un pourcentage de la largeur du viewport
+    */
+    font-size: 5vw;
+    background-color: var(--bg-color-text);
+}
+
+.target10 {
+    /* 
+    vh pour viewport height, représente un pourcentage de la hauteur du viewport
+    (à noter l'existence de dvw et dvh)
+    */
+    font-size: 10vh;
+    background-color: var(--bg-color-text);
+}
+
+.target1 {
+    /* 
+    vmax pour viewport max, représente un pourcentage de l'axe le plus grand (largeur ou hauteur)
+    il existe aussi vmin
+    */
+    font-size: 5vmax;
+}
+
+.target2 {
+    /* 
+    % représente un pourcentage du parent sur la même propriété
+    */
+    font-size: 150%;
+}
+
+.target3 {
+    /* 
+    le cm, à préférer en cas d'impression de la page
+    */
+    font-size: 1cm;
+}
+
+.target4 {
+    /* 
+    clamp permet une taille variable limitée à un minimum et un maximum
+    */
+    font-size: clamp(20px,5vw,30px)
+}
+
+/* 
+    Il existe d'autres unités comme les cqw et wqh que l'on verra plus tard si on a le temps 
+*/

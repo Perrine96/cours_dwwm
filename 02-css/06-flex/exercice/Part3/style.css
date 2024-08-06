@@ -1,0 +1,56 @@
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: rgb(127, 63, 222);
+    height: 20vh;
+}
+
+nav {
+    background-color: rgb(10, 247, 10);
+    height: 60vh;
+}
+
+main {
+    background-color: rgb(102, 123, 219);
+    height: 60vh;
+}
+
+footer {
+    background-color: green;
+    height: 20vh;
+}
+
+
+.content {
+    display: flex;
+}
+
+@media screen and (min-width: 500px) {
+    nav {
+        width: 20vh;
+    }
+
+    main {
+        /* width: 170vh; */
+        flex-grow: 1;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .content {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    main {
+        height: 40vh;
+    }
+
+    nav {
+        height: 20vh;
+    }
+}

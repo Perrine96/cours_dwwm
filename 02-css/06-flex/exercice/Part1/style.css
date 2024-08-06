@@ -1,0 +1,52 @@
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+}
+
+div {
+    width: 100%;
+    height: 100vh;
+}
+
+.bleu {
+    background-color: aqua;
+}
+.vert {
+    background-color: rgb(59, 250, 59);
+}
+.orange {
+    background-color: orangered;
+}
+.rose {
+    background-color: rgb(236, 61, 236);
+}
+.bleumarine {
+    background-color: blue;
+}
+.jaune {
+    background-color: yellow;
+}
+.marron {
+    background-color: rgb(85, 51, 51);
+}
+.gris {
+    background-color: rgb(174, 201, 206);
+}
+
+/* tablette */
+@media screen and (min-width: 500px) and (max-width: 1024px) {
+    main {
+        display: flex;
+    }
+}
+
+/* mobile */
+@media screen and (max-width: 500px) {
+    
+}

@@ -1,0 +1,71 @@
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: grid;
+    grid-template-rows: auto fr auto;
+    /* Le "&" correspond au sélecteur parent, ici "body" */
+    &>header {
+        background-color: lightgreen;
+        text-align: center;
+        padding: 1rem;
+        &>h1 {
+            font-size: 3em;
+        /* équivaul à écrire : body > header > h1:hover */
+            &:hover {
+                font-style: italic;
+            }
+        }
+    }
+    /* équivaut à écrire : body > header > p */
+    &>p {
+        font-size: 1.5em;
+    }
+    /* équivalent à : body main */
+    & main {
+        width: 80%;
+        margin: auto;
+        background-color: lightcyan;
+        /* 
+        équivalent à : body main > section 
+        normalement tout sélecteur est valide mais les navigateurs qui ne sont pas encore à jour ne suppportent que les sélecteurs commençant par un symbole : 
+        &, ::, :, ~, +, >, ., #, [, @
+        */
+        > section {
+            margin: 20px 50px;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        & h2 {
+            text-indent: 20px;
+            text-decoration: underline dashed red;
+        }
+        > p {
+            margin: 1em auto;
+            text-align: justify;
+        }
+        /* 
+        Dans ce cas-ci le nesting slector (&) est important: 
+        &:first-child équivaut à : 
+        body  main > section:first-child 
+        mais 
+        :first-child équivaut à : 
+        body main > section :first-child 
+        */
+        &:first-child, &:last-child {
+            background-color: lightsalmon;
+            box-shadow: 5px 5px 3px rgba(136, 84, 64, 0.4);
+        }
+    }
+}
+.strong {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    :is(header) & {
+        text-decoration: underline;
+    }
+    :is(main) & {
+        font-weight: bold;
+    }
+}

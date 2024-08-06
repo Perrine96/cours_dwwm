@@ -1,0 +1,302 @@
+Algorithme Calcul d'âge 
+// algorithme qui calcule l'âge de l'utilisateur au 31 décembre 2024
+Variables 
+    anneeDeNaissance, age: entier
+Début
+    anneeDeNaissance <-- saisie(); // L'utilisateur doit entrer une année de naissance 
+    age <-- 2024 - anneeDeNaissance;
+    Ecrire(age);
+Fin
+
+
+
+
+
+1 - Ecrire un algorithme qui demande un nombre à l’utilisateur, puis qui calcule et affiche le carré de ce nombre.
+
+Algorithme Calcul du carré d'un nombre entier 
+// algorithme qui calcule le carré d'un nombre entier
+Variables 
+    nombre, total: entier;
+Début
+    nombre ← saisie(); // L'utilisateur doit entrer un nombre entier
+    total ← nombre * nombre;
+    Ecrire(total);
+Fin
+
+
+
+
+
+2 - Ecrire un programme qui lit le prix HT d’un article, le nombre d’articles et le taux de TVA, et qui fournit le prix total TTC correspondant. Faire en sorte que des libellés apparaissent clairement.
+
+Algorithme Calcul du prix total TTC
+// algorithme qui calcule le prix total TTC
+Variables
+prixHT, tauxTVA, prixTotalTTC: double;
+nombreArticles: entier;
+Début
+    prixHT ← saisie(); // L'utilisateur doit entrer un prix HT
+    tauxTVA ← saisie(); // L'utilisateur doit entrer un taux TVA
+    nombreArticles ← saisie(); // L'utilisateur doit entrer un nombre d'articles
+    prixTotalTTC ← (prixHT + (prixHT * tauxTVA / 100)) * nombreArticles;
+    Ecrire(prixTotalTTC)
+Fin
+
+
+
+
+3 - Ecrire un algorithme utilisant des variables de type chaîne de caractères, et affichant quatre variantes possibles de la célèbre « belle marquise, vos beaux yeux me font mourir d’amour ». On ne se soucie pas de la ponctuation, ni des majuscules. 
+
+Algorithme Variantes d'une phrase
+// algorithme qui donne quatre variantes de la phrase "belle marquise vos beaux yeux me font mourir d'amour"
+Variables 
+morceau1, morceau2, morceau3: chaine de caractères;
+Début
+chaine1 ← "belle marquise";
+chaine2 ← "vos beaux yeux";
+chaine3 ← "me font mourir d'amour";
+Ecrire(chaine1 & " " & chaine2 + " " & chaine3);
+Ecrire(chaine2 & " " & chaine1 + " " & chaine3);
+Ecrire(chaine3 & " " & chaine2 + " " & chaine1);
+Ecrire(chaine1 & " " & chaine3 + " " & chaine2);
+Fin 
+
+
+
+
+
+4 - Ecrire un algorithme qui demande un nombre à l’utilisateur, et l’informe ensuite si ce nombre est positif ou négatif (on laisse de côté le cas où le nombre vaut zéro).
+
+Algorithme Nombre positif ou négatif
+// algorithme qui informe l'utilisateur si un nombre est positif ou négatif
+Variables
+nombre: entier;
+Début
+    nombre ← saisie(); // L'utilisateur doit entrer un nombre entier
+    Si (nombre > 0) alors
+        Ecrire("Le nombre est positif");
+    Sinon
+        Ecrire("Le nombre est négatif");
+    FinSi
+Fin
+
+--> pour prendre en compte le cas du 0 : 
+Algorithme Nombre positif ou négatif
+// algorithme qui informe l'utilisateur si un nombre est positif ou négatif
+Variables
+nombre: entier;
+Début
+    nombre ← saisie(); // L'utilisateur doit entrer un nombre entier
+    Si (nombre > 0) alors
+        Ecrire("Le nombre est positif");
+    Sinon si (nombre = 0) alors
+        Ecrire("Le nombre est nul");
+    Sinon
+        Ecrire("Le nombre est négatif");
+    FinSi
+Fin
+
+
+
+
+
+5 - Ecrire un algorithme qui demande deux nombres à l’utilisateur et l’informe ensuite si leur produit est négatif ou positif (on laisse de côté le cas où le produit est nul). Attention toutefois : on ne doit pas calculer le produit des deux nombres.
+
+Algorithme Produit positif ou négatif
+// algorithme qui calcule si le produit de deux nombres entiers est positif ou négatif
+Variables
+nombre1, nombre2: entier;
+Début
+    nombre1 ← saisie(); // L'utilisateur doit entrer un nombre entier
+    nombre2 ← saisie(); // L'utilisateur doit entrer un nombre entier
+    Si (nombre1 < 0 ou nombre2 < 0) alors
+        Ecrire("Le produit est négatif");
+    Sinon si (nombre1 = 0 ou nombre2 = 0) alors
+        Ecrire("Le produit est nul");
+    Sinon si (nombre1 > 0 et nombre2 > 0) alors
+        Ecrire("Le produit est positif");
+    Sinon
+        Ecrire("Le produit est positif");
+    FinSi
+Fin 
+
+
+
+
+
+6 - Ecrire un algorithme qui demande trois noms à l’utilisateur et l’informe ensuite s’ils sont rangés ou non dans l’ordre alphabétique.
+
+Algorithme Ordre alphabétique   
+// algorithme qui compare trois noms et informe l'utilisateur s'ils sont rangés dans l'ordre alphabétique
+Variables
+nom1, nom2, nom3: car;
+Début
+    Ecrire("Entrez trois noms");
+    nom1 ← saisie();
+    nom2 ← saisie(); 
+    nom3 ← saisie(); 
+    Si ((nom1 > nom2) && (nomt2 > nom3)) alors
+        Ecrire("Les noms sont rangés dans l'ordre alphabétique");
+    Sinon 
+        Ecrire("Les noms ne sont pas rangés dans l'ordre alphabétique");
+    FinSi
+Fin
+
+
+
+
+
+7 - Ecrire un algorithme qui demande l’âge d’un enfant à l’utilisateur. 
+Ensuite, il l’informe de sa catégorie :
+• "Poussin" de 6 à 7 ans
+• "Pupille" de 8 à 9 ans
+• "Minime" de 10 à 11 ans
+• "Cadet" après 12 ans
+Peut-on concevoir plusieurs algorithmes équivalents menant à ce résultat ?
+
+Algorithme Catégorie âge
+//algorithme qui informe l'utilisateur de la catégorie d'un enfant selon son âge
+Variables
+age: entier;
+Début
+    age ← saisie();
+    Si (age >= 6 && age <= 7) alors 
+        Ecrire("L'enfant est un Poussin");
+    Sinon si (age >= 8 && age <= 9) alors
+        Ecrire("L'enfant est un Pupille");
+    Sinon si (age >= 10 && age <= 11) alors
+        Ecrire("L'enfant est un Minime");
+    Sinon si (age => 12) alors
+        Ecrire("L'enfant est un Cadet");
+    Sinon
+        Ecrire("L'enfant n'appartient à aucune catégorie");
+    FinSi
+Fin
+
+
+
+
+
+8 - Cet algorithme est destiné à prédire l'avenir, et il doit être infaillible !
+Il lira au clavier l’heure et les minutes, et il affichera l’heure qu’il sera une minute plus tard. Par exemple, si l'utilisateur tape 21 puis 32, l'algorithme doit répondre :
+"Dans une minute, il sera 21 heure(s) 33".
+NB : on suppose que l'utilisateur entre une heure valide. Pas besoin donc de la vérifier.
+
+Algorithme Prédiction de l'heure
+// algorithme qui prédit l'heure
+Variables
+heure, minutes: entier;
+Début
+    heure ← saisie();
+    minutes ← saisie();
+    Sinon si ((heure = 23) && (minutes = 59)) alors
+        heure ← 0;
+        minutes ← 0;
+    Si (minutes = 59) alors 
+        heure ← heure + 1;
+        minutes ← 0;
+    Sinon
+        minutes ← minutes + 1;
+    FinSi
+    Ecrire("Dans une minute, il sera" & " " & heure & " " & "heure(s)" & " " minutes);
+Fin
+
+
+
+
+
+9 - De même que le précédent, cet algorithme doit demander une heure et en afficher une autre. Mais cette fois, il doit gérer également les secondes, et afficher l'heure qu'il sera une seconde plus tard.
+Par exemple, si l'utilisateur tape 21, puis 32, puis 8, l'algorithme doit répondre : "Dans une seconde, il sera 21 heure(s), 32 minute(s) et 9 seconde(s)".
+NB : là encore, on suppose que l'utilisateur entre une date valide.
+
+Algorithme Prédiction de l'heure
+// algorithme qui prédit l'heure
+Variables
+heures, minutes, secondes: entier;
+Début
+    heures ← saisie();
+    minutes ← saisie();
+    secondes ← saisie();
+    Si ((heures = 23) && (minutes = 59) && (secondes = 59)) alors
+        heures ← 0;
+        minutes ← 0;
+        secondes ← 0;
+    Sinon si ((minutes = 59) && (secondes = 59)) alors 
+        heures ← heures + 1;
+        minutes ← 0;
+        secondes ← 0;
+    Sinon si (secondes = 59) alors 
+        minutes ← minutes + 1;
+        secondes ← 0;
+    Sinon
+        secondes ← secondes + 1;
+    FinSi
+    Ecrire("Dans une minute, il sera" & " " & heures & " " & "heure(s)" & " " minutes & " " & "seconde(s)");
+Fin
+
+
+
+
+10 - Un magasin de reprographie facture 0,10 E les dix premières photocopies, 0,09 E les vingt suivantes et 0,08 E au-delà. Ecrivez un algorithme qui demande à l’utilisateur le nombre de photocopies effectuées et qui affiche la facture correspondante.
+
+Algorithme Facture magasin de reprographie
+// algorithme qui demande à l'utilisateur le nombre de photocopies effectuées et qui affiche la facture correspondante
+Variables 
+nombre: entier, prix: réel; 
+Début 
+    nombre ← saisie();
+    Si (nombre <= 10) alors
+        prix ← 0.10*nombre;
+    Sinon si ((nombre > 10) && (nombre <= 30)) alors
+        prix ← 0.10*10 + 0.09*(nombre-10);
+    Sinon si (nombre > 30) alors 
+        prix ← 0.10*10 + 0.09*20 + 0.08*(nombre-30);
+    Finsi 
+    Ecrire ("La facture est de " & prix & " E " & "pour" & nombre & "copie(s)")
+Fin
+
+
+
+
+11 - Les habitants de Zorglub paient l’impôt selon les règles suivantes :
+• les hommes de plus de 20 ans paient l’impôt
+• les femmes paient l’impôt si elles ont entre 18 et 35 ans
+• les autres ne paient pas d’impôt
+Le programme demandera donc l’âge et le sexe du Zorglubien, et se prononcera donc ensuite sur le fait que l’habitant est imposable.
+
+Algorithme Calcul impôts
+// 
+Variables 
+sexe: CAR, age: entier;
+Début 
+    sexe ← saisie();
+    age ← saisie();
+    Si (sexe == femme) && (age >= 18 && age < 35) alors 
+        Ecrire ("L'habitant est imposable");
+    Si (sexe == homme) && (age > 20) alors 
+        Ecrire ("L'habitant est imposable");
+    Sinon 
+        Ecrire ("L'habitant n'est pas imposable");
+    Finsi 
+Fin
+
+Avec un boolean : 
+Algorithme Calcul impôts
+// 
+Variables 
+femme: boolean, age: entier;
+Début 
+    sexe ← saisie();
+    age ← saisie();
+    Si (sexe = femme) && (age >= 18 && age < 35) alors 
+        Ecrire ("L'habitant est imposable");
+    Si (sexe = non femme) && (age > 20) alors 
+        Ecrire ("L'habitant est imposable");
+    Sinon 
+        Ecrire ("L'habitant n'est pas imposable");
+    Finsi
+Fin
+
+
+

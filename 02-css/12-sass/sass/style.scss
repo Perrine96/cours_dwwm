@@ -1,0 +1,108 @@
+@use "list";
+// CTRL + / : Commentaire en un ligne
+/* ALT + SHIFT + A : commentaire sur plusieurs lignes */
+
+
+/* -------------- NESTING -------------- */
+/* 
+    La nidification permet d'inclure des sélecteurs css dans d'autres sélecteurs css.
+    Par exemple dire que seul les h2 présents dans une section sont modifiés
+*/
+section {
+    background-color: aquamarine;
+    h2 {
+        background-color: lightcoral;
+    }
+    &:hover {
+        transform: scale(1.5);
+        transform-origin: left;
+    }
+}
+
+/* ------------- VARIABLES ------------- */
+/* 
+    Les variables sass sont plus simples d'utilisation et n'apparaissent pas en CSS
+*/
+$colorMain: violet;
+.menu {
+    background-color: $colorMain;
+}
+
+/* --------------- EXTENDS ------------ */
+/* 
+    Les extends permettent de déclarer un morceau de code, réutilisable ailleurs. 
+    Ou bien de réutiliser un code appliqué à un classe
+*/
+%flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header {
+    @extend %flexCenter;
+}
+main {
+    ul {
+        @extend %flexCenter;
+    }
+}
+
+/* ------------- MIXIN ------------- */
+/* 
+    Les mixin ressemblent aux extends, si ce n'est qu'on va pouvoir le faire passer des paramètres
+*/
+@mixin absol($top, $left: 50%, $tx: -50%, $ty: -50%) {
+    position: absolute;
+    top: $top;
+    left: $left;
+    transform: translate($tx, $ty);
+}
+div.copy {
+    font-size: 4rem;
+    background-color: mediumorchid;
+    @include absol(20%, 25%, 100px, 20px);
+}
+div.menu {
+    font-size: 3rem;
+    background-color: lightgreen;
+    @include absol(70%, $ty: -400px);
+}
+/* --------------- FONCTIONS -------------- */
+/* 
+    Les fonctions vont ressembler un peu aux mixins mais ne vont pas afficher une règle CSS, seulement retourner une valeur.
+    Certaines sont déjà définies dans un SASS, d'autres peuvent etre créées par nous-même.
+*/
+@function compLight($color) {
+    $comp: complement($color);
+    $light: lighten($comp, 15%);
+    @return $light;
+}
+main {
+    li:nth-child(1) {
+        background-color: complement(chartreuse);
+    }
+    li:nth-child(2) {
+        background-color: compLight(chartreuse);
+    }
+}
+
+/* -------------- CONDITIONS ------------- */
+/* 
+
+*/
+@mixin radius($w, $h) {
+    width: $w;
+    height: $h;
+    @if $w == $h {
+        border-radius: 50%;
+    }
+    @else {
+        border-radius: 5px;
+    }
+}
+div.copy {
+    @include radius(5rem, 5rem);
+}
+div.menu {
+    @include radius (10rem, 5rem)
+}

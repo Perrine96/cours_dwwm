@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cours CSS - fontawesome</title>
+    <!-- link si on n'a pas téléchargé fontawesome et qu'on passe par cdnjs.com -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+
+    <!-- link quand on a téléchargé fontawesome -->
+    <!-- <link rel="stylesheet" href="./fontawesome-free-6.6.0-web/css/all.min.css"> -->
+
+    <!-- avec node.js -->
+     <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <style>
+        /* peut changer les propriétés du svg, comme sa couleur avec "fill" par contre on ne peut pas faire pareil avec l'image importée. On peut cependant aller dans le fichier image et lui ajouter "fill" */
+        svg, img {
+            width: 250px;
+            fill: green;
+        }
+        * {
+            color: red;
+            font-size: 2em;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- il faut télécharger fontawesome ou ajouter le lien cdnjs dans le head pour utiliser ça:-->
+    <i class="fa-solid fa-database"></i>
+
+    <!-- copier/coller du lien svg -->
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M64 96c0-35.3 28.7-64 64-64l384 0c35.3 0 64 28.7 64 64l0 256-64 0 0-256L128 96l0 256-64 0L64 96zM0 403.2C0 392.6 8.6 384 19.2 384l601.6 0c10.6 0 19.2 8.6 19.2 19.2c0 42.4-34.4 76.8-76.8 76.8L76.8 480C34.4 480 0 445.6 0 403.2zM281 209l-31 31 31 31c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-48-48c-9.4-9.4-9.4-24.6 0-33.9l48-48c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9zM393 175l48 48c9.4 9.4 9.4 24.6 0 33.9l-48 48c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l31-31-31-31c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0z"/></svg>
+
+    <!-- téléchargement de l'image -->
+    <img src="./hashtag-solid.svg" alt="icon">
+</body>
+</html>

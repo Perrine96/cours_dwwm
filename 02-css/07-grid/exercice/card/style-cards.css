@@ -1,0 +1,45 @@
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+main {
+    margin: 5vh;
+}
+
+div {
+    border: 1px solid black;
+    background: linear-gradient(white 95%, grey 5%);
+    margin: 20px 0px;
+}
+
+p {
+    margin: 0vh 2vh 5vh 2vh;
+    font-size: 15px;
+}
+
+img {
+    height: 30vh;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+h1 {
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+h2 {
+    font-weight: bold;
+    margin: 2vh 2vh 0vh 2vh;
+    font-size: 18px;
+}
+
+header {
+    margin: 10vh 5vh;
+}

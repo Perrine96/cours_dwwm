@@ -1,0 +1,17 @@
+/* Les fichiers avec un underscore au début ne sont pas traduits en css */
+/* --------------- BOUCLES -------------- */
+@mixin liste($li...) {
+    // @debug $li;
+    @for $i from 0 to length($li) {
+        // @debug $i;
+        #{nth($li, $i+1)}
+        {
+            font-size: 30px + $i * 10;
+        }
+    }
+}
+
+ul {
+    background-color: cornflowerblue;
+    @include liste(".truc1", ".truc2", ".truc3", ".truc4", ".truc5");
+}

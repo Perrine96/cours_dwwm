@@ -1,0 +1,353 @@
+@font-face {
+    font-family: Catamaran;
+    src: url(./Catamaran-VariableFont_wght.ttf); 
+}
+@font-face {
+    font-family: Grand_Hotel;
+    src: url(./GrandHotel-Regular.ttf); 
+}
+
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Catamaran;
+}
+
+
+/* ---------- GLOBAL ---------- */
+body {
+    display: grid;
+    grid-template-rows: 70vh auto 25vh;
+    & p {
+        font-size: .9rem;
+    }
+}
+
+main {
+    display: grid;
+    & p {
+    color: #617d99;
+    }
+}
+
+
+
+/* ----------- HEADER ---------- */
+header {
+    background-image:  linear-gradient(rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.5) 100%), url(./main-bcg.jpeg);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+        & svg {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            height: 30px;
+            fill: #678e3e;
+        }
+        & .btn2 {
+            outline: .4rem double #678e3e;
+            padding: .4rem 1rem;
+            font-size: 1rem;
+            border: none;
+        }
+        & h2 {
+            font-family: Grand_Hotel;
+            color: #678e3e;
+            font-size: 1.5rem;
+            padding: 100px 50px 15px 50px;
+            letter-spacing: 5px;
+        }
+        & h1 {
+            color: whitesmoke;
+            font-size: 2.4rem;
+            padding: 0 60px 30px 60px;
+            letter-spacing: 5px;
+            line-height: 50px;
+        }
+        & img {
+            width: 100vw;
+        } 
+}
+
+
+/* ------------ SVG + IMG ------------- */
+svg {
+    fill: #678e3e;
+}
+main img {
+    width: 100vw;
+} 
+
+
+/* ----------- GRADIENT -------- */
+.gradient {
+    height: 10px;
+    background: linear-gradient(90deg, #678e3e 0%, #e6b849 50%, #678e3e 100%);
+}
+
+
+/* ------------ TITLES -------- */
+h2 {
+    font-size: 1.8rem;
+    letter-spacing: .3rem;
+    transform: scaleY(1.1);
+}
+
+h3 {
+    font-family: Grand_Hotel;
+    color: #678e3e;
+    letter-spacing: .2rem;
+    font-size: 1.3rem;
+}
+
+h4 {
+    letter-spacing: .2rem;
+    font-size: .9rem;
+    padding: 16px 0 5px 0;
+}
+
+h5 {
+    letter-spacing: .3rem;
+    font-size: .8rem;
+    color: #678e3e;
+    font-weight: normal;
+}
+
+
+/* ----------- BUTTONS ---------- */
+button{
+    background-color: #678e3e;
+    color: whitesmoke;
+    letter-spacing: 2px;
+}
+
+.btn3 {
+    border: none;
+    padding: .2rem .6rem;
+    font-size: .8rem;
+    letter-spacing: 3px;
+}
+
+.btn4 {
+    border: none;
+    padding: .3rem .6rem;
+    border-radius: 7px;
+    font-size: .8rem;
+    letter-spacing: 3px;
+}
+
+
+/* --------- CONTAINERS --------- */
+/* ----- container1 ----- */
+.container1 {
+    background-color: #f1f5f8;
+    text-align: center;
+    padding: 3rem 4rem;
+    display: grid;
+    gap: 70px;
+        & svg {
+            height: 40px;
+        }
+}
+
+/* ----- container2 ----- */
+.container2 {
+    padding: 4rem 1.5rem;
+    display: grid;
+    gap: .8rem;
+        & img {
+            border: 7px solid #678e3e;
+            width: 100%;
+            grid-area: 1;
+        }
+        & h3 {
+            padding-top: 2rem;
+            grid-area: 2;
+            align-self: flex-end;
+        }
+        & h2 {
+            grid-area: 3;
+        }
+        & #p1 {
+            grid-area: 4;
+        }
+        & #p2 {
+            grid-area: 5;
+        }
+        & .btn3 {
+            height: fit-content;
+            width: fit-content;
+            transform: scaleY(1.1);
+            margin: .8rem 0;
+        }
+}
+
+/* ----- container3 ----- */
+.container3 {
+    background-color: #f1f5f8;
+    display: grid;
+    padding: 4rem 1.5rem;
+    gap: .8rem;
+    & img {
+        width: 100%;
+        border-radius: 8px;
+    }
+    & .price {
+        color: #678e3e;
+        font-size: .8rem;
+    }
+    & .btn3 {
+        height: fit-content;
+        width: fit-content;
+        transform: scaleY(1.1);
+        margin: .8rem 0 1.7rem 0;
+    }
+}
+.container3_1 {
+    display: grid;
+    gap: .7rem;
+}
+.container3_2, .container3_3, .container3_4 {
+    display: grid;
+}
+
+/* ----- container4 ----- */
+.container4 {
+    text-align: center;
+    display: grid;
+    padding: 4rem 1.5rem;
+    gap: 2rem;
+     & svg {
+        height: 40px;
+     }
+     & img {
+        border-radius: 8px 8px 0 0;
+     }
+     & span {
+        background-color: #beed8c;
+        width: 5rem;
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+        border: 6px solid #f1f5f8;
+        background-position: center;
+        background-size: 60%;
+        background-repeat: no-repeat;
+        position: relative;
+        top: 10%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+     }
+     & .circle4_2 {
+        background-image: url(./mortar-pestle-solid.svg);
+     }
+     & .circle4_3 {
+        background-image: url(./house-chimney-solid.svg);
+     }
+     & .circle4_4 {
+        background-image: url(./mug-hot-solid.svg);
+     }
+}
+
+/* titres */
+.container4_1 {
+    display: grid;
+    gap: .7rem;
+}
+
+/* les 3 sections */
+.container4_2, .container4_3, .container4_4 {
+    background-color: #f1f5f8;
+    box-shadow: 0px 5px 21px -7px rgba(94,94,94,0.35);
+    display: grid;
+    border-radius: 8px;
+    grid-template-rows: 1fr 3rem 3rem 5.5rem 5rem;
+    & .btn4 {
+        height: fit-content;
+        width: fit-content;
+        align-self: flex-start;
+        justify-self: center;
+    }
+    & p {
+        padding: 0 1.5rem 2rem 1.5rem;
+    }
+}
+
+/* ----- container5 ----- */
+.container5 {
+    background-color: #f1f5f8;
+    padding: 4rem 1.5rem;
+        /* TODO: placement icônes à revoir */
+        & img {
+            position: absolute;
+            height: 1rem;
+            left: -42vw;
+        }
+        & h5 { 
+            display: inline-block;
+            padding-left: 1.3rem;
+        }
+        & p {
+            color: black;
+            letter-spacing: .2rem;
+            font-weight: bold;
+            padding-bottom: 1.5rem;
+        }
+        & form {
+            display: grid;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 3px 5px 25px -7px rgba(94,94,94,0.40);
+            grid-template-rows: 4rem 2rem 2rem 8rem 2.5rem;
+            gap: 1rem;
+                & .contact {
+                    color: #617d99;
+                    letter-spacing: 3px;
+                    font-size: 1.5rem;
+                    font-weight: bold;
+                    text-align: center;
+                    padding-top: .8rem;
+                }
+                & #name, #email, #message {
+                    margin: 0 1rem 0 1rem;
+                    border-radius: 8px;
+                    border: none;
+                    background-color: #f1f5f8;
+                }
+                & ::placeholder {
+                    color: #c6cdd4;
+                    padding: .7rem .7rem;
+                    letter-spacing: 3px;
+                }
+                & #submit {
+                    background-color: #678e3e;
+                    color: white;
+                    border: none;
+                    border-radius: 0 0 8px 8px;
+                    transform: scaleY(1.1);
+                    letter-spacing: 3px;
+                }
+        }
+}
+
+
+/* ---------- FOOTER ----------- */
+footer {
+    background-color: #222222;
+    color: white;
+    text-align: center;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    padding: 10%;
+    display: grid;
+    & p {
+        line-height: 18px;
+    }
+    & img {
+        width: 1.8rem;
+    }
+    & span {
+        color: #678e3e;
+    }
+}

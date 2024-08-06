@@ -1,0 +1,45 @@
+button {
+    border: 1px solid black;
+    background-color: white;
+    box-shadow: 10px 5px .5px rgb(133, 133, 133);
+    position: absolute;
+    left: 80%;
+}
+
+li {
+    font-size: 15px;
+}
+
+/* desktop */
+@media screen and (min-width: 900px) {
+    button {
+        visibility: hidden;
+    }
+    li {
+        list-style-type: none;
+        padding: 5px;
+        font-size: 20px;
+        display: block;
+    }
+
+    li:hover {
+        background-color: black;
+        color: white;
+        display: block;
+    }
+}
+
+/* ipad */
+@media screen and (min-width: 600px) and (max-width: 1025px) {
+    button {
+        visibility: hidden;
+    }
+    li {
+        display: inline-block;
+        font-size: 35px;
+        padding: 30px;
+    }
+    body {
+        text-align: center;
+    }
+}

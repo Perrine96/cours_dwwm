@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cours HTML - Les tableaux</title>
+    <style>
+        table, td, tr   
+            {
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>Couleur</td> 
+            <td>Fruit</td>
+        </tr>
+        <tr>
+            <td>Vert</td>
+            <td>Citron</td>
+        </tr>
+        <tr>
+            <td>Jaune</td>
+            <td>Banane</td>
+        </tr>
+    </table>
+
+    <table>
+        <thead>
+            <tr>
+                <th colspan="2">Fruits</th>
+                <th colspan="2">Légumes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>  
+                <td>pomme</td>
+                <td>cerise</td>
+                <td>carotte</td>
+                <td rowspan="2">aubergine</td>
+            </tr>
+            <tr>
+                <td>banane</td>
+                <td colspan="2">tomate</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <td>Commentaire</td>
+            <td colspan="3">Mangez 5 fruits et légumes par jour</td>
+        </tfoot>
+    </table>
+</body>
+</html>

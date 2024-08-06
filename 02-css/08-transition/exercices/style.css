@@ -1,0 +1,102 @@
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: lightgrey;
+}
+
+ul {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+li {
+    margin: 1rem 1rem;
+    display: inline-block;
+}
+
+button {
+    font-size: 2rem;
+    padding: 1rem 2rem;
+}
+
+/* mouseout */
+.btn1 {
+    background-color: transparent;
+    border: 4px solid grey;
+    color: grey;
+    transition-property: background-color, border, color, transform;
+    transition-duration: 1s;
+}
+.btn1:hover {
+    background-color: rgba(255, 0, 0, 0.2);
+    border: 4px solid red;
+    color: red;
+    transition-property: background-color, border, color;
+    transform: rotateY(360deg);
+}
+
+.btn2 {
+    background-color: orangered;
+    border: 3px solid orangered;
+    border-radius: 50px;
+    color: white;
+    font-weight: bold;
+    transition-property: border;
+    transition-duration: .5s;
+}
+.btn2:hover {
+    border: 3px solid white;
+}
+span {
+    display: inline-block;
+    background-color: orangered;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    transition-property: background-color, color, transform;
+}
+.btn2:hover span {
+    background-color: white;
+    color: orangered;
+    transform: rotate(-360deg);
+    transition-duration: 1.2s;
+
+}
+
+.btn3 {
+    background-color: rgb(245, 21, 107);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 15px 15px 5px rgb(109, 109, 109);
+    color: white;
+    transition-property: transform, box-shadow;
+    transition-duration: .5s;
+}
+.btn3:hover {
+    box-shadow: 10px 10px 5px rgb(109, 109, 109); 
+    translate: 0 3px;
+}
+.btn3:active {
+    transform: rotateX(360deg);
+}
+
+.btn4 {
+    color: rgb(120, 17, 218);
+    font-weight: bold;
+    border: none;
+    transition-property: border, color;
+    transition-duration: 1s, .2s;
+}
+.btn4:hover {
+    border-top: 4px solid rgb(120, 17, 218);
+    border-bottom: 4px solid rgb(120, 17, 218);
+    color: black;
+}
+.btn4:active {
+    color: magenta;
+    border-top: 4px solid magenta;
+    border-bottom: 4px solid magenta;
+}

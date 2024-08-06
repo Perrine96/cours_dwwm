@@ -1,0 +1,87 @@
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.aqua {
+    background-color: aqua;
+    height: 15vh;
+}
+.green {
+    background-color: rgb(41, 255, 87);
+    height: 15vh;
+}
+.orange {
+    background-color: rgb(203, 118, 0);
+    height: 15vh;
+}
+.pink {
+    background-color: rgb(217, 44, 194);
+    height: 15vh;
+}
+.blue {
+    background-color: rgb(23, 39, 188);
+    height: 15vh;
+}
+.yellow {
+    background-color: rgb(250, 247, 42);
+    height: 15vh;
+}
+.brown {
+    background-color: rgb(70, 49, 37);
+    height: 15vh;
+}
+.grey {
+    background-color: rgb(160, 191, 191);
+    height: 15vh;
+}
+.black {
+    background-color: rgb(42, 71, 82);
+    height: 15vh;
+}
+
+/* tablette */
+@media screen and (min-width: 700px) {
+    main {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    div {
+        width: 50%;
+        /* Pourquoi je ne peux pas modifier la hauteur des div via ce sélecteur ?
+        Priorité ? */
+        height: 40vh;
+    }
+
+    .blue {
+        width: 100%;
+        height: 20vh;
+    }
+
+    .green, .pink, .orange, .aqua, .brown, .grey, .black, .yellow {
+        height: 20vh;
+    }
+}
+
+/* desktop */
+@media screen and (min-width: 900px) {
+    main {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    div {
+        width: 25%;
+    }
+
+    .blue {
+        width: 100%;
+        height: 35vh;
+    } 
+
+    .green, .pink, .orange, .aqua, .brown, .grey, .black, .yellow {
+        height: 35vh;
+    }
+}

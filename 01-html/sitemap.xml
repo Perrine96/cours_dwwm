@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmins="http://www.sitemaps.orf/schemas/sitemap/0.9">
+    <url>
+        <!-- Important -->
+        <loc>http://monsite.fr/</loc>
+        <!-- optionnel -->
+        <lastmod>2024-07-11</lastmod>
+        <echangefreq>daily</echangefreq>
+        <priority>1</priority> 
+    </url>
+</urlset>

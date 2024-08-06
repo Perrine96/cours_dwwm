@@ -1,0 +1,36 @@
+body {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    padding: 8px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 1px solid red;
+}
+
+section#presentation {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-around;
+}
+
+section#presentation div:nth-child(1) {
+   background-color: red; 
+}
+section#presentation div:nth-child(2) {
+    background-color: blue;
+}
+section#presentation div:nth-child(3) {
+    background-color: green;
+}
+section#presentation div:nth-child(4) {
+    background-color: yellow;
+}
+
+section#presentation .div {
+    width: 100px;
+}

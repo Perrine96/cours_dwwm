@@ -1,0 +1,76 @@
+
+ul {
+    position: absolute;
+    top: 50%;
+    left: -100%;
+    transform: translate(-50%, -50%);
+    /* permet de sélectionner les propriétés qui doivent transitionner
+    Cad passer d'une valeur à une autre petit à petit et non instantanément
+    Seules les propriétés avec une valeur numérique peuvent transitionner */
+    transition-property: left;
+    /* Durée de la transition */
+    transition-duration: 1s;
+}
+
+li {
+    margin: 1rem 0;
+    display: inline-block;
+}
+
+button {
+    font-size: 3rem;
+    aspect-ratio: 1/1;
+}
+
+li:nth-child(1) button{
+    background-color: chartreuse;
+    /* Si on veut une transition entre plusieurs propriétés, il faut les séparer d'une virgule */
+    transition-property: background-color, transform;
+    /* Si une seule valeur de durée est donnée, elle s'applique à toutes les propriétés sinon il faut aussi les séparer de virgule */
+    transition-duration: 1s, 2s;
+    /* Applique un délai avant de commencer la transition */
+    transition-delay: 0.5s;
+    /* Défini le rythme auquel se déroule la transition, par défaut linéaire, on peut par exemple l'accélérer au début puis ralentir à la fin
+    Pour cela on peut utiliser un des mots clés ou la fonction cubic-bezier */
+    transition-timing-function: cubic-bezier(1,-0.61,.23,1.9);
+}
+li:nth-child(1) button:hover{
+    background-color: darkmagenta;
+    transform: rotate(180deg);
+}
+
+li:nth-child(2) button{
+    /* le mot clé "all" permet d'appliquer la transition sur tout */
+    transition-property: all;
+    transition-duration: 1s;
+    /* steps permet une transition par étape et non fluide */
+    transition-timing-function: steps(5, jump-start);
+}
+li:nth-child(2) button:hover{
+    border-radius: 50%;
+}
+
+li:nth-child(3) button{
+    /* rassemble toutes les propriétés de transition */
+    transition: all 1s 0.5s linear;
+}
+li:nth-child(3) button:active{
+    box-shadow: 10px 50px 10px 50px red;
+}
+
+li:nth-child(4) button{
+    /* Si une seule valeur de temps est donnée, c'est la durée, et si les deux sont données, la seconde sera le délai */
+    transition: transform .5s linear;
+}
+li:nth-child(4):hover button{
+    /* Si la transition est sur le hover et non sur l'élément de base, la transition ne se fera que dans un sens */
+    transform: scale(0.5);
+}
+
+input#burger {
+    display: none;
+}
+
+input#burger:checked ~ ul {
+    left: 50%;
+}

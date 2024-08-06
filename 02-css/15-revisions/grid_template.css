@@ -1,0 +1,35 @@
+body {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    padding: 8px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 1px solid red;
+}
+
+section#presentation {
+    display: grid;
+    grid-template-areas: 
+    'a a'
+    'b c'
+    'd d';
+}
+
+section#presentation div:nth-child(1) {
+   background-color: red; 
+   grid-area: d;
+}
+section#presentation div:nth-child(2) {
+    background-color: blue;
+}
+section#presentation div:nth-child(3) {
+    background-color: green;
+}
+section#presentation div:nth-child(4) {
+    background-color: yellow;
+    grid-area: a;
+}

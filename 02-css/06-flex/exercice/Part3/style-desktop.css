@@ -1,0 +1,39 @@
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: rgb(127, 63, 222);
+    height: 150px;
+}
+
+nav {
+    background-color: rgb(10, 247, 10);
+    width: 200px;
+}
+
+main {
+    background-color: rgb(102, 123, 219);
+    width: 1100px
+}
+
+footer {
+    background-color: green;
+    height: 150px;
+}
+
+
+.content {
+    display: flex;
+    height: 400px;
+}
+
+@media screen and (max-width: 500px) {
+    body {
+        display: flex;
+        flex-direction: column;
+
+    }
+}

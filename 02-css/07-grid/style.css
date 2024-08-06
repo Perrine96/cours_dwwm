@@ -1,0 +1,101 @@
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    /* 
+        Le display grid se place sur le parent des éléments que l'on souhaite déplacer
+        Il permet de former une grille et de placer les éléments sur celle-ci
+        Si rien n'est précisé, la grille fait une colonne et autant de ligne qu'il y a d'éléments
+    */
+    display: grid;
+    /* 
+        Permet d'indiquer le nombre de rangées et leur taille
+        Chaque valeur représente la taille d'une nouvelle rangée
+        auto est la valeur de base 
+        1fr signifie une fraction de la grille. S'il n'y a pas d'autres valeurs en "fr", il prendra tout l'espace restant.
+    */
+    grid-template-rows: auto 1fr auto;
+}
+
+main {
+    display: grid;
+    grid-template-rows: 20vh auto 200px 100px;
+    /* 
+        Indique le nombre et la taille des colonnes
+        la fonction repeat permet d'indiquer que l'on souhaite répéter une valeur plusieurs fois 
+        Ici 5 colonnes de 15%, au lieu de:
+        grid-template-columns: 15% 15% 15% 15% 15%;
+    */
+    grid-template-columns: repeat(5, 15%);
+    /* 
+    Si la largeur de ma grille est inférieure à celle du conteneur, je peux espacer mes colonnes avec justify-content
+    */
+    justify-content: space-evenly;
+    /* 
+        Sur le verticale on utilisera align-content
+    */
+}
+
+main > div:nth-child(1) {
+    background-color: lightgreen;
+    /* Permet d'indiquer à partir de quelle colonne mon élément commence */
+    grid-column-start: 2;
+    /* Permet d'indiquer jusqu'à quelle colonne mon élément doit aller */
+    grid-column-end: 5;
+    /* Fonctionnent de la même façon mais pour les rangées */
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+main > div:nth-child(2) {
+    background-color: lightblue;
+    /* 
+        Version raccourcie des propriétés:
+            - grid-column-start
+            - grid-column-end
+     */
+    grid-column: 1/2;
+    grid-row: 1/3;
+}
+
+main > div:nth-child(3) {
+    background-color: lightcoral;
+    /* 
+        Version encore plus raccourcie: 
+            grid-row-start / grid-column-start / grid-row-end / grid-column-end
+    */
+    grid-area: 1/5/4/6;
+}
+
+main > div:nth-child(4) {
+    background-color: lightseagreen;
+    /* 
+        Plutôt qu'indiquer une position de fin, on peut aussi indiquer un nombre de case à prendre avec un "span"
+    */
+    grid-row: 3 / span 2; 
+    grid-column: 1 / span 3;
+}
+
+main > div:nth-child(5) {
+    background-color: lightgoldenrodyellow;
+    /* 
+        On peut aussi indiquer des colonnes ou rangées depuis la fin
+        Pour cela on indiquera une valeur négative
+    */
+    grid-row: 5 / -1;
+    grid-column: 1 / -2;
+}
+
+main > div:nth-child(6) {
+    background-color: pink;
+    /* 
+        On peut volontairement ou involontairement placer des éléments au dessus d'autres éléments
+    */
+    grid-row: 4/6;
+    grid-column: 3/5;
+}
+/* Les éléments non positionnés iront se placer dans les cases restantes. Si il n'y en a pas, ils créront de nouvelles lignes en "auto" */

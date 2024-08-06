@@ -1,0 +1,7 @@
+Sitemap: http://www.mon-domaine.fr/sitemap.xml
+User-agent: *
+Disallow: /admin/
+
+User-agent: Googlebot
+Disallow: /profil/
+Disallow: /connexion/

@@ -1,0 +1,99 @@
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    height: 25vh;
+    /* 
+        Le display flex permet de placer des éléments de façon flexible, cad qu'ils vont automatiquement se placer selon la taille du viewport et s'adapter 
+        Pour placer 2 éléments en flex, il faut mettre le display flex sur leur parent
+        Par ex ici en placant le display flex sur le "ul", cela déplace les "li"
+    */
+    display: flex;
+    /* 
+        Permet de sélectionner l'axe principal de la flex box
+        row (par défaut)
+        row-reverse 
+        column
+        column-reverse
+    */
+    flex-direction: row;
+    /* 
+        Permet de choisir le placement des éléments sur l'axe principal
+        start
+        end
+        center
+        space-around
+        space-between
+        space-evenly
+    */
+    justify-content: space-evenly;
+    /* 
+        Permet de créer de nouvelles lignes si l'espace vient à manquer
+        nowrap (par défaut)
+        wrap 
+        wrap-reverse
+    */
+    flex-wrap: wrap;
+    /* 
+        Définit le placement des éléments sur l'axe secondaire
+        strech (par défaut)
+        start
+        center
+        end
+    */
+    align-items: center;
+    border: 1px solid black;
+}
+
+li {
+    width: 40vw;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    background-color: cadetblue;
+    margin: 5px;
+    list-style: none;
+    text-align: center;
+}
+
+li:last-child {
+    /* 
+        Permet de déplacer un des enfants différemment du placement choisi par le parent
+    */
+    align-self: flex-end;
+}
+
+li:hover {
+    /*  
+        Indique à l'élément de grandir en prenant l'espace restant
+    */
+    flex-grow: 1;
+}
+
+section {
+    display: flex;
+    /* 
+        Raccourci de flex-direction et flex-wrap
+    */
+    flex-flow: column wrap;
+    height: 60vh;
+    /* 
+        Espacement entre les colonnes et les lignes
+    */
+    gap: 20px;
+}
+
+article {
+    width: 40%;
+    background-color: rgb(172, 216, 216);
+}
+
+article:nth-of-type(2) {
+    background-color: darkorange;
+    /* 
+
+    */
+    order: 1;
+}

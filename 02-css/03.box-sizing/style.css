@@ -1,0 +1,136 @@
+*, ::before, ::after {
+    /* 
+        Le margin est un espacement à l'extérieur de l'élément HTML 
+    */
+    margin: 0;
+    /*  
+        Le padding est un espacement à l'intérieur de celui-ci (entre la bordure et le contenu) 
+    */
+    padding: 0;
+    /*  
+        Border-box permet à la bordeur d'être prise en compte quand on donne une largeur ou une hauteur 
+    */
+    box-sizing: border-box;
+}
+
+header {
+    background-color: aqua;
+    /* 
+        background-image permet d'ajouter une image de fond
+        Si on souhaite en mettre plusieurs sur un même élément, il faut les séparer d'une virgule
+        Les premières passent au dessus des suivantes 
+    */
+    background-image: url(./pexels-pixabay-458976.jpg), url(./pexels-wilddaisy278-5326566.jpg);
+    /* 
+        Si une image est trop petite pour remplie l'élément, elle va se répéter
+        Si on souhaite éviter cela, on peut utiliser background-repeat
+    */
+    background-repeat: no-repeat;
+    /* 
+        background-position permet : 
+        si l'image est plus petite, de la positionner dans l'élément 
+        si l'image est plus grande, d'indiquer quelle partie de l'image est visible
+    
+    */
+    background-position: right 50px bottom, center;
+    /* 
+        Permet d'indiquer à l'image d'être contenue par son parent ou bien de le couvrir (ou d'indiquer la taille qu'elle fait)
+    */
+    background-size: contain, cover;
+}
+
+main {
+    background-color: violet;
+}
+
+main article {
+    /* 
+        modifier la largeur
+    */
+    width: 45%;
+    /* 
+         choisir le display (la façon de s'afficher) de l'élément, on trouvera "inline", "block", "inline-block", "none" et d'autres
+    */
+    display: inline-block;
+    border: 5px solid black;
+    /* 
+        équivaut à : 
+        - border-color: black; 
+        - border-style: solid;
+        - border-width: 5px;
+    */
+    border-top: 10px dashed blue;
+    /* 
+        padding et margin sont des versions résumées de padding-top...bottom...left...right...
+        avec une seule valeur, elle est appliquée partout
+        2 valeurs, la première est pour le haut et le bas, la seconde pour la gauche et la droite
+        4 valeurs, elles s'appliquent dans l'ordre haut droite bas gauche
+    */
+    padding: 5px 10px;
+    margin: 20px auto 10px 2%;
+}
+
+h1 { 
+    font-size: 42px;
+    /* 
+        positionnement du texte dans un élément
+    */
+    text-align: center;
+    padding: .5em .1em;
+    color: white; 
+    /* 
+        Décalage horizontal
+        Décalage vertical
+        Puissance du flou (optionnelle)
+        Couleur
+    */
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.6)
+}
+
+footer {
+    /* 
+        la propriété background est la version résumée de toutes les propriétés de background (image, color, repeat...)
+    */
+    background: blue;
+    /* 
+        width et height permettent de choisir la largeur et la hauteur d'un élément
+        min-width et min-height permettent de dire à l'élément qu'il doit faire au moins une certaine taille mais peut dépasser
+        max-width et max-height permettent de dire à l'élément qu'il ne doit pas dépasser une taille mais peut être plus petit
+    */
+    min-height: 150px;
+}
+
+li {
+    display: inline-block;
+    background-color: aqua;
+    /* 
+        permet de garder un ratio entre la largeur et la hauteur de mon élément
+        si les deux sont définis, le ratio ne fonctionne plus 
+    */
+    aspect-ratio: 1/1;
+    /* 
+        permet d'arrondir les angles d'un certain nombre de pixels, à 50% (si largeur=hauteur) on obtient un rond
+    */
+    border-radius: 50%;
+    padding: 1.3em 5px;
+    margin-left: 15%;
+}
+
+div {
+    width: 40vw;
+    max-height: 90vh;
+    margin: 5px auto;
+}
+
+img {
+    width: 100%;
+    height: 20vh;
+    /* 
+        correspond au background-size mais adapté à la balise image
+    */
+    object-fit: cover;
+    /* 
+        correspond au background-position mais adapté à la balise image
+    */
+    object-position: center;
+}

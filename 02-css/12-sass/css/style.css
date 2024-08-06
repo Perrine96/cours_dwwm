@@ -1,0 +1,109 @@
+@charset "UTF-8";
+/* Les fichiers avec un underscore au début ne sont pas traduits en css */
+/* --------------- BOUCLES -------------- */
+ul {
+  background-color: cornflowerblue;
+}
+ul .truc1 {
+  font-size: 30px;
+}
+ul .truc2 {
+  font-size: 40px;
+}
+ul .truc3 {
+  font-size: 50px;
+}
+ul .truc4 {
+  font-size: 60px;
+}
+ul .truc5 {
+  font-size: 70px;
+}
+
+/* ALT + SHIFT + A : commentaire sur plusieurs lignes */
+/* -------------- NESTING -------------- */
+/* 
+    La nidification permet d'inclure des sélecteurs css dans d'autres sélecteurs css.
+    Par exemple dire que seul les h2 présents dans une section sont modifiés
+*/
+section {
+  background-color: aquamarine;
+}
+section h2 {
+  background-color: lightcoral;
+}
+section:hover {
+  transform: scale(1.5);
+  transform-origin: left;
+}
+
+/* ------------- VARIABLES ------------- */
+/* 
+    Les variables sass sont plus simples d'utilisation et n'apparaissent pas en CSS
+*/
+.menu {
+  background-color: violet;
+}
+
+/* --------------- EXTENDS ------------ */
+/* 
+    Les extends permettent de déclarer un morceau de code, réutilisable ailleurs. 
+    Ou bien de réutiliser un code appliqué à un classe
+*/
+main ul, header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ------------- MIXIN ------------- */
+/* 
+    Les mixin ressemblent aux extends, si ce n'est qu'on va pouvoir le faire passer des paramètres
+*/
+div.copy {
+  font-size: 4rem;
+  background-color: mediumorchid;
+  position: absolute;
+  top: 20%;
+  left: 25%;
+  transform: translate(100px, 20px);
+}
+
+div.menu {
+  font-size: 3rem;
+  background-color: lightgreen;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -400px);
+}
+
+/* --------------- FONCTIONS -------------- */
+/* 
+    Les fonctions vont ressembler un peu aux mixins mais ne vont pas afficher une règle CSS, seulement retourner une valeur.
+    Certaines sont déjà définies dans un SASS, d'autres peuvent etre créées par nous-même.
+*/
+main li:nth-child(1) {
+  background-color: #8000ff;
+}
+main li:nth-child(2) {
+  background-color: #a64dff;
+}
+
+/* -------------- CONDITIONS ------------- */
+/* 
+
+*/
+div.copy {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+}
+
+div.menu {
+  width: 10rem;
+  height: 5rem;
+  border-radius: 5px;
+}
+
+/*# sourceMappingURL=style.css.map */

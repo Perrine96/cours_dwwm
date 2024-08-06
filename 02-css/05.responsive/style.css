@@ -1,0 +1,52 @@
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: bisque;
+    margin: 0;
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+article {
+    margin: 1rem 10px;
+    border: 1px solid rgb(66, 66, 66);
+    padding: .5rem;
+}
+
+/* 
+    @media query permet d'appliquer des règles sous certaines conditions
+    par exemple ici : j'indique que les règles entre accolade ne s'appliquent que si c'est un écran et qu'il fait au moins 600px    
+*/
+@media screen and (min-width: 600px) {
+    body {
+        background-color: rgb(226, 199, 230);
+    }
+    article {
+        display: inline-block;
+        width: 45%;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    article {
+        width: 30%;
+    }
+}
+
+/* Si le viewport est en dessous de 500px*/
+@media screen and (max-width: 500px) {}
+/* si on tente d'imprimer la page */
+@media print {}
+@media screen and (orientation: landscape) {}
+@media screen and (orientation: portrait) {}
+/* selon si le navigateur (ou l'os) est en mode dark ou non */
+@media (prefer-color-scheme: dark) {}
+@media (prefer-color-scheme: light) {}
+/* si les options de réduction de mouvement sont activées */
+@media (prefers-reduced-motion: reduce) {}

@@ -1,0 +1,43 @@
+*, ::before, ::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ------------exo2------------- */
+@keyframes bounce {
+    from {
+        top: 25%;
+    }
+    to {
+        top: 30%;
+    }
+}
+
+.exo2 {
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+}
+
+.dot1, .dot2, .dot3 {
+    animation-name: bounce;
+    animation-direction: alternate;
+    animation-duration: 0.25s;
+    animation-iteration-count: infinite;
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: black;
+}
+
+.dot2 {
+    left: 40%;
+    animation-delay: 0.05s;
+}
+
+.dot3 {
+    right: 40%;
+    animation-delay: 0.1s;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cours CSS - Les sélecteurs</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+    h1 {
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <!-- header>(h1>a>{Super Site Grandiose})+p>{Ce site est vraiment super}-->
+    <header style="background-color: blue;">
+        <h1><a href="https://google.fr/search?q=carbonnade" target="blank">
+            Super Site Grandiose  
+            </a>
+        </h1>
+        <p>
+            Ce site est vraiment super
+        </p>
+    </header>
+
+    <!--main>(p>lorem+span*3)+article>h2+p>{Gros article vraiment long}-->
+    <main>
+        <p>
+            <span>Lorem ipsum dolor sit amet,</span> consectetur adipisicing elit. <span> Cupiditate impedit sed nam!</span> Suscipit repellendus necessitatibus deleniti aut cum, <span> harum assumenda</span> nulla aliquid, repudiandae facilis illo non, quos expedita.
+        </p>
+        <article>
+            <h2>Super article</h2>
+            <p>
+                Gros article vraiment long
+            </p>
+        </article>
+    </main>
+    <!--footer>ul>li*6.footer-list>{Menu $}-->
+    <footer>
+        <ul>
+            <li class="footer-list" id="MenuImportant">Menu 1</li>
+            <li class="footer-list"><a href="http://amazon.fr">Amazon</a></li>
+            <li class="footer-list" aria-posinset="">Menu 3</li>
+            <li class="footer-list"><a href="https://www.marquiset.fr">Nolwenn</a></li>
+            <li class="footer-list" peuImportant>Menu 5</li>
+            <li class="footer-list"><a href="https://wikipedia.org/wiki/amazonie">Wikipédia</a></li>
+        </ul>
+    </footer>
+</body>
+</html>
