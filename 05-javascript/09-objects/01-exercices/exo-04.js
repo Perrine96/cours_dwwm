@@ -6,24 +6,23 @@
 let compte = {
     nom: 'Mallard',
     solde: 1000, 
-    // historique: 1000,
+    historique: [],
     // méthodes 
     deposer: function(depot) {
+        this.solde = this.solde + depot, 
         console.log(`Dépôt: ${depot} euros`)
     },
     retirer: function(retrait) {
+        this.solde = this.solde - retrait, 
         console.log(`Retrait: ${retrait} euros`)
     },
-    afficherHistorique: function(solde, depot, retrait) {
-        solde = solde + depot - retrait,
-        console.log(`Nouveau solde: ${solde} euros`)
+    afficherHistorique: function() {
+        console.log(compte.historique)
+        console.log(`Nouveau solde: ${compte.solde} euros`)
     }
 }
 
 
-compte.deposer(100);
+compte.deposer(200);
 compte.retirer(500);
-compte.afficherHistorique() 
-// Retait: 100 euros
-// Dépôt: 500euros
-// Nouveau solde: 600 euros
+compte.afficherHistorique();
