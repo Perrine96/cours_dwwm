@@ -1,0 +1,80 @@
+# version '3.8'
+#On ne l'indique plus mais on pourra tomber dessus
+
+# L'indentation est importante, ainsi que les espaces. La syntaxe est très stricte.
+# services: #obligatoire
+#   name:
+#     image: monimage
+#     volumes: 
+#       - volume-name:containerPath:ro
+
+#   monservice2:
+#     image: monimage
+#     ports:
+#       - "8080:80" # l'espace après le tiret est important. Il y aura une erreur autrement. 
+
+# -------------------------------------------------------------------------------------------------
+
+# services: 
+  # monservice:
+    # image: alpine
+    # 'command' et 'entrypoint' auront plus tendance à être dans le dockerfile plutôt qu'ici
+    # command: ['ls']
+    # entrypoint: ['ls']
+
+# -------------------------------------------------------------------------------------------------
+
+# service créé à partir d'une image officielle
+services:
+  a: 
+    container_name: database # optionnel mais pratique
+    image: alpine
+
+# services créés à partir d'un build
+  b: 
+    container_name: front
+    build:
+      context: ./front
+      dockerfile: Dockerfile
+      # args:
+      #   - FOLDER=test2
+    ports:
+      - "8089:80"
+    volumes:
+      - ./front/public/:/usr/share/nginx/html
+    # volumes:
+      # - datafront:/usr/share/nginx/html # volume nommé 
+    # environment:
+      # - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+    env_file:
+      - .env
+  c:
+    container_name: back
+    # 'depend_on' : ne lance le service c qu'une fois que le service a est lancé 
+    depends_on:
+      - a
+    build:
+      context: ./back
+      dockerfile: Dockerfile
+      args:
+        - FOLDER=test
+
+# à faire avec les volumes nommés:
+# volumes:
+  # datafront:
+# les volumes sont protégés. Suppression plus compliquée.
+
+
+# -------------------------------------------------------------------------------------------------
+
+# Dans le terminal: 
+#   - 'docker compose up'
+#   - 'docker compose up -d'
+#   - 'docker compose run [nom du service]'
+#   - 'docker compose down'
+#   - 'docker compose down --remove-orphans' 
+#   - 'docker buildx prune -a' : nettoyer le cache 
+
+# Rappel :
+#   - 'docker ps -a'
+#   - 'docker image ls'

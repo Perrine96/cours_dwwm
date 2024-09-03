@@ -1,0 +1,11 @@
+ARG version=latest
+FROM httpd:${version}
+
+RUN apt-get update \
+    && apt-get install -y nano \
+    && curl -fsSL https://deb.nodesource.com/setup_20.x | bash - \
+    && apt-get install -y nodejs
+
+WORKDIR /usr/local/apache2/htdocs/
+
+COPY ./public/ . 

@@ -1,0 +1,41 @@
+services:
+  a:
+    build: 
+      context: ./front
+      dockerfile: Dockerfile
+    command: ['ping', 'google.fr']
+# à mettre avec le réseau déjà existant:
+    networks:
+      - monreseau
+
+  b:
+    image: alpine
+    command: ['ping', 'google.fr']
+# à mettre avec le réseau déjà existant:
+    networks:
+      - monreseau
+
+# créer un réseau:
+# networks:
+#   default:
+#     name: monreseau
+
+# réseau déjà existant + mettre nos containers dedans:
+networks:
+  monreseau:
+    external: true 
+    name: monreseau
+
+# ------------------------------------------------------------------------------------------------
+
+# Dans le terminal: 
+  # - 'docker compose up -d'
+  # - 'docker exec -ti docker-compose-reseau-a-1 sh'
+  # - 'ping -c4 docker-compose-reseau-b-1'
+
+# Rappel: 
+#   - 'docker buildx prune -a': nettoyer le cache
+
+# ------------------------------------------------------------------------------------------------
+
+# Erreur 'mapping': souvent un problème d'intentation 
