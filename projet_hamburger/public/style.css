@@ -1,0 +1,114 @@
+:root {
+    --vh: 1vh;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+    font-family: 'handjet';
+    color: white;
+}
+
+body, 
+html {
+    background: linear-gradient(109.6deg, rgb(133, 218, 240) 11.2%, rgb(253, 145, 212) 54.5%, rgb(247, 197, 139) 99.6%);
+    overflow-x: hidden;
+    /* background-image: no-repeat; */
+    min-height: 120vh;
+    /* cursor: url(./arrow_13371444\.png), auto; */
+}
+
+div#logo {
+    padding: 8px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    color: whitesmoke;
+    gap: 10px;
+    font-size: 3rem;
+}
+
+svg {
+    height: 50px;
+    fill: white;
+    opacity: .7;
+}
+
+nav {
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    background-color: rgba(58, 34, 146, 0.164);
+    /* background-color: red; */
+}
+
+ul#nav {
+    display: none;
+}
+
+/* main {
+    padding: 8em 0em;
+} */
+
+ul#nav-mobile {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #fce0c94b;
+    /* background-color: pink; */
+    opacity: .8;
+    position: fixed;
+    align-content: stretch;
+    justify-content: space-evenly;
+    align-items: center;
+    top: 0;
+    right: 0;
+    width: 30vw;
+    transform: translate(100%);
+    border-radius: 50px 0px 0px 50px;
+    font-size: 1.5rem;
+}
+
+div#hamburger {
+    height: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: transparent;
+    z-index: 1;
+    cursor: pointer;
+}
+
+div#hamburger > span {
+    display: block;
+    background-color: white;
+    opacity: .8;
+    height: 5px;
+    width: 30px;
+    border-radius: 8px;
+}
+
+
+/* @media only screen and (min-width: 640px) {
+    ul#nav-mobile {
+        width: 20vw;
+    }
+  }  */
+
+
+  @media only screen and (min-width: 640px) {
+    ul#nav {
+        height: 30px;
+        display: flex;
+        flex-grow: 1;
+        justify-content: space-around;
+
+    }
+    div#hamburger {
+        display: none;
+    }
+}
